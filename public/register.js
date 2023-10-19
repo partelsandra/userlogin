@@ -4,6 +4,8 @@ registerButton.addEventListener('click', async () => {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
 
+    console.log('Registreerimine: Kasutajanimi - ' + username + ', E-post - ' + email + ', Salasõna - ' + password);
+
     const response = await fetch('/users/register', {
         method: 'POST',
         headers: {

@@ -1,6 +1,7 @@
 document.getElementById('login-button').addEventListener('click', async function() {
-    const username = document.getElementById('username').value;
-    const password = document.getElementById('password').value;
+    const username = document.getElementById('login-username').value;
+    const password = document.getElementById('login-password').value;
+
 
     const response = await fetch('/users/login', {
         method: 'POST',

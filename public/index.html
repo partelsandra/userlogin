@@ -6,7 +6,7 @@
 </head>
 <body>
 <h1>Registreerimine</h1>
-<form id="register-form">
+<form id="register-form" action="/users/register" method="POST"> <!-- Lisatud "action" ja "method" atribuudid -->
     <label for="username">Kasutajanimi:</label>
     <input type="text" id="username" name="username" required>
     <br>
@@ -16,7 +16,7 @@
     <label for="password">Salasõna:</label>
     <input type="password" id="password" name="password" required>
     <br>
-    <button type="button" id="register-button">Registreeri</button>
+    <button type="submit" id="register-button">Registreeri</button> <!-- Lisatud "type" atribuut "submit" ja eemaldatud "type" atribuut "button" -->
 </form>
 <script src="register.js"></script>
 </body>
