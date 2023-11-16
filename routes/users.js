@@ -1,3 +1,4 @@
+// routes/users.js
 const express = require('express');
 const router = express.Router();
 
@@ -51,7 +52,8 @@ module.exports = (pool, bcrypt) => {
 
             // 3. Looge sessioon, kui autentimine on õnnestunud
             req.session.user = user[0];
-            res.redirect('/dashboard'); // Suunake autenditud kasutaja juhtpaneelile või muule lehele
+            // Redirect to the main notebook page after successful login
+            res.redirect('/notes');
         } catch (error) {
             console.error('Sisselogimise viga:', error);
             res.status(500).send('Midagi läks valesti.');
